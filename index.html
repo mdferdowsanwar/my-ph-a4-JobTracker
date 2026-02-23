@@ -59,19 +59,24 @@
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-white px-4 py-1 rounded-sm text-md cursor-pointer">Rejected</button>
         </div>
 
+        <!-- Filtered Cards -->
+         <section id="filtered-card" class="hidden">
+
+         </section>
+
         <section id="allCards">
             <!-- single card info -->
             <div class="card flex justify-between bg-white p-5 rounded-md my-5">
                 <!-- card content -->
-                <div>
+                <div class="parentDiv">
                     <div class="my-2">
                         <h3 class="companyName text-xl font-bold">Company Name</h3>
                         <p class="position">Position</p>
                     </div>
                     <ul class="flex gap-10 text-gray-700 my-2">
-                        <li>Location</li>
-                        <li class="list-disc">Type</li>
-                        <li class="list-disc">Salary 2000</li>
+                        <li class="location">Location</li>
+                        <li class="type list-disc">Type</li>
+                        <li class="salary list-disc">Salary 2000</li>
                     </ul>
                     <span class="status bg-gray-300 my-2 py-1 px-2">Not Applied</span>
                     <p class="description my-2 text-sm">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, rem.</p>
@@ -91,15 +96,15 @@
             <!-- single card info -->
             <div class="card flex justify-between bg-white p-5 rounded-md my-5">
                 <!-- card content -->
-                <div>
+                <div class="parentDiv">
                     <div class="my-2">
-                        <h3 class="companyName text-xl font-bold">Company Name</h3>
+                        <h3 class="companyName text-xl font-bold">Company Name 2</h3>
                         <p class="position">Position</p>
                     </div>
                     <ul class="flex gap-10 text-gray-700 my-2">
-                        <li>Location</li>
-                        <li class="list-disc">Type</li>
-                        <li class="list-disc">Salary 2000</li>
+                        <li class="location">Location</li>
+                        <li class="type list-disc">Type</li>
+                        <li class="salary list-disc">Salary 2000</li>
                     </ul>
                     <span class="status bg-gray-300 my-2 py-1 px-2">Not Applied</span>
                     <p class="description my-2 text-sm">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, rem.</p>
@@ -116,34 +121,8 @@
                 </div>
             </div>
 
-            <!-- single card info -->
-            <div class="card flex justify-between bg-white p-5 rounded-md my-5">
-                <!-- card content -->
-                <div>
-                    <div class="my-2">
-                        <h3 class="companyName text-xl font-bold">Company Name</h3>
-                        <p class="position">Position</p>
-                    </div>
-                    <ul class="flex gap-10 text-gray-700 my-2">
-                        <li>Location</li>
-                        <li class="list-disc">Type</li>
-                        <li class="list-disc">Salary 2000</li>
-                    </ul>
-                    <span class="status bg-gray-300 my-2 py-1 px-2">Not Applied</span>
-                    <p class="description my-2 text-sm">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, rem.</p>
-                    <div class="mt-3 flex gap-2">
-                        <button class="interview-btn text-sm font-bold text-green-500 border border-green-500 px-3 py-1 cursor-pointer rounded-sm">INTERVIEW</button>
-                        <button class="rejected-btn text-sm font-bold text-red-500 border border-red-500 px-3 py-1 cursor-pointer rounded-sm">REJECTED</button>
-                    </div>
-                </div>
-                <!-- card delete btn -->
-                <div>
-                    <button class="cursor-pointer w-8 h-8 rounded-full border border-gray-300">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
-                </div>
-            </div>
         </section>
+        
     </main>
 
     <script src="./assets/script.js"></script>

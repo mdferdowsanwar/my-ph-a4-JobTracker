@@ -24,7 +24,7 @@
 </head>
 
 <body class="bg-gray-100">
-
+    <!-- Header Part Start -->
     <header class="w-11/12 sm:w-8/12 mx-auto mt-6">
         <h1 class="text-3xl font-bold mb-5">Job Application Tracker</h1>
         <div class="grid grid-col-1 sm:grid-cols-3 gap-5">
@@ -42,32 +42,39 @@
             </div>
         </div>
     </header>
-    <!-- horizontal line -->
+    <!-- Header Part End -->
+
+    <!-- horizontal line Start -->
     <div class="w-11/12 sm:w-8/12 mx-auto my-6">
         <hr class="border-gray-400">
     </div>
+    <!-- horizontal line End -->
 
+    <!-- Main Section Start -->
     <main class="w-11/12 sm:w-8/12 mx-auto">
         <div class="flex justify-between my-4">
             <h2 class="font-bold text-xl">Available Jobs</h2>
             <p><span id="allJobsCount">0</span> jobs</p>
         </div>
-        <!-- three button -->
+        <!-- Three Toggle Button Start -->
         <div class="flex gap-2">
             <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-blue-500 text-white px-4 py-1 rounded-sm text-md cursor-pointer">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-white px-4 py-1 rounded-sm text-md cursor-pointer">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-white px-4 py-1 rounded-sm text-md cursor-pointer">Rejected</button>
         </div>
-
-        <!-- Filtered Cards -->
+        <!-- Three Toggle Button End -->
+        
+        <!-- Filtered Cards Start -->
          <section id="filtered-card" class="hidden">
 
          </section>
+         <!-- Filtered Cards End -->
 
+        <!-- All Card Section Start -->
         <section id="allCards">
-            <!-- single card info -->
+            <!-- Single Card Info Start-->
             <div class="card flex justify-between bg-white p-5 rounded-md my-5">
-                <!-- card content -->
+                <!-- Card Content -->
                 <div class="parentDiv">
                     <div class="my-2">
                         <h3 class="companyName text-xl font-bold">Company Name</h3>
@@ -92,10 +99,11 @@
                     </button>
                 </div>
             </div>
+            <!-- Single Card Info End-->
 
-            <!-- single card info -->
+            <!-- Single Card Info Start -->
             <div class="card flex justify-between bg-white p-5 rounded-md my-5">
-                <!-- card content -->
+                <!-- Card Content Start -->
                 <div class="parentDiv">
                     <div class="my-2">
                         <h3 class="companyName text-xl font-bold">Company Name 2</h3>
@@ -113,18 +121,21 @@
                         <button class="rejected-btn text-sm font-bold text-red-500 border border-red-500 px-3 py-1 cursor-pointer rounded-sm">REJECTED</button>
                     </div>
                 </div>
-                <!-- card delete btn -->
+                <!-- Card Content End -->
+                 
+                <!-- Card Delete Btn Start -->
                 <div>
                     <button class="cursor-pointer w-8 h-8 rounded-full border border-gray-300">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </div>
+                <!-- Card Delete Btn End -->
             </div>
-
+            <!-- Single Card Info End -->
         </section>
-        
+        <!-- All Card Section Start -->
     </main>
-
+    <!-- Main Section End -->
     <script src="./assets/script.js"></script>
 </body>
 

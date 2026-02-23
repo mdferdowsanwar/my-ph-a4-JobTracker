@@ -1,6 +1,8 @@
+// Create empty array
 let interviewList = [];
 let rejectedList = [];
 
+// For counting card value
 let totalCount = document.getElementById('totalCount');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
@@ -18,6 +20,7 @@ const mainContainer = document.querySelector('main');
 
 const filterCard = document.getElementById('filtered-card');
 
+// Count card value
 function calculateCount() {
     totalCount.innerText = allCards.children.length;
     allJobsCount.innerText = allCards.children.length;
@@ -26,6 +29,7 @@ function calculateCount() {
 }
 calculateCount();
 
+// Toggle Button
 function toggleStyle(id) {
     allFilterBtn.classList.remove('bg-blue-500', 'text-white');
     interviewFilterBtn.classList.remove('bg-blue-500', 'text-white');
@@ -56,7 +60,7 @@ function toggleStyle(id) {
     }
 }
 
-//Event delegation
+//Event Delegation
 mainContainer.addEventListener("click", function (event) {
 
     if (event.target.classList.contains('interview-btn')) {
@@ -135,6 +139,7 @@ mainContainer.addEventListener("click", function (event) {
 
 });
 
+// Render Interviews
 function renderInterview() {
     filterCard.innerHTML = '';
 
@@ -170,6 +175,7 @@ function renderInterview() {
     }
 }
 
+// Render Rejected
 function renderRejected() {
     filterCard.innerHTML = '';
 

@@ -136,6 +136,25 @@ mainContainer.addEventListener("click", function (event) {
         }
         calculateCount();
     }
+    // Delete button Functionality
+    if(event.target.classList.contains('fa-trash-can')) {
+        const cardNode = event.target.closest('.card');
+        const companyName = cardNode.querySelector('.companyName').innerText;
+
+        interviewList = interviewList.filter(item => item.companyName !== companyName);
+        rejectedList = rejectedList.filter(item => item.companyName !== companyName);
+
+        cardNode.remove();
+
+        calculateCount();
+
+        if(currentStatus == 'interview-filter-btn'){
+            renderInterview();
+        }
+        if(currentStatus == 'rejected-filter-btn'){
+            renderRejected();
+        }
+    }
 
 });
 

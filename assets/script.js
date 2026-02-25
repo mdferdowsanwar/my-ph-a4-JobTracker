@@ -135,9 +135,10 @@ mainContainer.addEventListener("click", function (event) {
             renderInterview();
         }
         calculateCount();
+
     }
     // Delete button Functionality
-    if(event.target.classList.contains('fa-trash-can')) {
+    if (event.target.classList.contains('fa-trash-can')) {
         const cardNode = event.target.closest('.card');
         const companyName = cardNode.querySelector('.companyName').innerText;
 
@@ -148,10 +149,10 @@ mainContainer.addEventListener("click", function (event) {
 
         calculateCount();
 
-        if(currentStatus == 'interview-filter-btn'){
+        if (currentStatus == 'interview-filter-btn') {
             renderInterview();
         }
-        if(currentStatus == 'rejected-filter-btn'){
+        if (currentStatus == 'rejected-filter-btn') {
             renderRejected();
         }
     }
@@ -160,12 +161,21 @@ mainContainer.addEventListener("click", function (event) {
 
 // Render Interviews
 function renderInterview() {
-    filterCard.innerHTML = '';
+    if (interviewList.length < 1) {
+        filterCard.innerHTML = `
+                <div class="bg-white p-8 my-6 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/jobs.png" alt="">
+                    <h3 class="text-xl font-bold">No jobs available</h3>
+                    <p class="text-sm">Check back soon for new job opportunities</p>
+                </div>
+            `;
+    } else {
+        filterCard.innerHTML = '';
 
-    for (let interview of interviewList) {
-        let cardDiv = document.createElement('div');
-        cardDiv.className = 'card flex justify-between bg-white p-5 rounded-md my-5';
-        cardDiv.innerHTML = `
+        for (let interview of interviewList) {
+            let cardDiv = document.createElement('div');
+            cardDiv.className = 'card flex justify-between bg-white p-5 rounded-md my-5';
+            cardDiv.innerHTML = `
         <div class="parentDiv">
             <div class="my-2">
                 <h3 class="companyName text-xl font-bold">${interview.companyName}</h3>
@@ -190,18 +200,27 @@ function renderInterview() {
             </button>
         </div>
         `
-        filterCard.appendChild(cardDiv);
+            filterCard.appendChild(cardDiv);
+        }
     }
 }
 
 // Render Rejected
 function renderRejected() {
-    filterCard.innerHTML = '';
-
-    for (let rejected of rejectedList) {
-        let cardDiv = document.createElement('div');
-        cardDiv.className = 'card flex justify-between bg-white p-5 rounded-md my-5';
-        cardDiv.innerHTML = `
+    if (rejectedList.length < 1) {
+        filterCard.innerHTML = `
+                <div class="bg-white p-8 my-6 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/jobs.png" alt="">
+                    <h3 class="text-xl font-bold">No jobs available</h3>
+                    <p class="text-sm">Check back soon for new job opportunities</p>
+                </div>
+            `;
+    } else {
+        filterCard.innerHTML = '';
+        for (let rejected of rejectedList) {
+            let cardDiv = document.createElement('div');
+            cardDiv.className = 'card flex justify-between bg-white p-5 rounded-md my-5';
+            cardDiv.innerHTML = `
         <div class="parentDiv">
             <div class="my-2">
                 <h3 class="companyName text-xl font-bold">${rejected.companyName}</h3>
@@ -226,6 +245,8 @@ function renderRejected() {
             </button>
         </div>
         `
-        filterCard.appendChild(cardDiv);
+            filterCard.appendChild(cardDiv);
+
+        }
     }
 }

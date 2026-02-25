@@ -10,8 +10,8 @@ Ans:
 
 2. How do you create and insert a new element into the DOM?
 Ans:
-step-1: Create a new element by using document.createElement('elementName');
-step-2: Add content to the created element like:
+    step-1: Create a new element by using document.createElement('elementName');
+    step-2: Add content to the created element like:
         elementName.textContent = "your text write here.";
         And/OR
         elementName.className = 'className className';
@@ -19,8 +19,8 @@ step-2: Add content to the created element like:
         elementName.id = 'IdName';
         And/OR
         elementName.setAttribute('data-type', 'info');
-step-3: Select the parent element by selector.
-step-4: Inserting into the parent element by using parentElement.appendChild 
+    step-3: Select the parent element by selector.
+    step-4: Inserting into the parent element by using parentElement.appendChild 
         (elementName); or parentElement.append(elementName);
 
 3. What is Event Bubbling? And how does it work?
@@ -29,10 +29,10 @@ Ans: When you trigger and event like click or other the event first run that ele
 4. What is Event Delegation in JavaScript? Why is it useful?
 Ans: Event Delegation is a technique where you can add only one addEventListener to a parent element instead of using multiple addEventListener. Then the parent handle the event using event Bubbling.
 
-How it works:
-(i) Event bubble up child to parent
-(ii) The parent listens to the event
-(iii)Finally by sing event.target we find which element was clicked.
+    How it works:
+        (i) Event bubble up child to parent
+        (ii) The parent listens to the event
+        (iii)Finally by sing event.target we find which element was clicked.
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
 preventDefault():
